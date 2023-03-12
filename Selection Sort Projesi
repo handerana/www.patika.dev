@@ -24,7 +24,7 @@ takdirde o indexin yerini alır ve sıralama kayar. [2,16,18,22,27,6]
 5-6.indexteki sayı sırayla 1.,2.,3.,4. ve 5.indexteki sayı kıyaslanır. 6.indexteki değer bu 5 indexteki değerden küçük olmadağı sürece dizideki yerini korur.Küçük oluduğu
 takdirde o indexin yerini alır ve sıralama kayar. [2,6,16,18,22,27]
 
-Big-O gösterimi = 0(n²)
+Big-O gösterimi = O(n²)
 
 18 sayısı 3.indexte olduğu için avarage case kapsamına girer.
 
