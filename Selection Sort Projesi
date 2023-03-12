@@ -12,19 +12,43 @@ Worst case: Aradığımız sayının sonda olması
 Best case: Aradığımız sayının dizinin en başında olması.
 
 [22,27,16,2,18,6] -> Insertion Sort Aşamaları
-1-Dizideki en küçük sayı bulunur.(2) Dizide 6 adet sayı olduğu için (n=6) 6 işlem gerçekleşir.
-2-Dizide bulunan en küçük sayı ilk indexteki sayı ile yer değiştirir. [2,27,26,22,18,6]
-3-İlk indexteki sayımızı netleştirdiğimiz için 2.indexteki say, ilk indexteki sayı hariç, dizideki diğer sayılarla sorgulanır. (n-1) 5 işlem gerçekleşir.
-Sorguda çıkan en küçük sayı 2.indexteki sayı ile yer değiştirir. [2,6,26,22,18,27]
-4-İlk 2 indexteki sayıyı netleştirdiğimiz için 3.aşamada yaptığımız gibi, 3.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-2) 4 işlem gerçekleşir.
-[2,6,18,22,26,27]
-5-İlk 3 indexteki sayıyı netleştirdiğimiz için 3.aşamada yaptığımız gibi, 4.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-3) 3 işlem gerçekleşir.
-[2,6,18,22,26,27]
-5-İlk 4 indexteki sayıyı netleştirdiğimiz için 3.aşamada yaptığımız gibi, 5.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-4) 2 işlem gerçekleşir.
-[2,6,18,22,26,27]
-6-İlk 5 indexteki sayıyı netleştirdiğimiz için 3.aşamada yaptığımız gibi, 6.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-5) 1 işlem gerçekleşir.
-[2,6,18,22,26,27]
+
+1-Dizide 2.indexteki sayıdan başlanır. 1.indexteki sayı ile 2.indexteki sayı kıyaslanır. Hangisi küçükse 1.indexe o geçer. (bu dizide 22,27den küçük olduğu için
+ilk sorgu işlemi sonucu dizide değişim olmuyor) [22,27,16,2,18,6]
+2-3.indexteki sayı sırayla 1. ve 2.indexteki sayı kıyaslanır. 3.indexteki değer bu 2 indexteki değerden küçük olmadağı sürece dizideki yerini korur.Küçük oluduğu
+takdirde o indexin yerini alır ve sıralama kayar. [16,22,27,2,18,6]
+3-4.indexteki sayı sırayla 1.,2. ve 3.indexteki sayı kıyaslanır. 4.indexteki değer bu 3 indexteki değerden küçük olmadağı sürece dizideki yerini korur.Küçük oluduğu
+takdirde o indexin yerini alır ve sıralama kayar. [2,16,22,27,18,6]
+4-5.indexteki sayı sırayla 1.,2.,3. ve 4.indexteki sayı kıyaslanır. 5.indexteki değer bu 4 indexteki değerden küçük olmadağı sürece dizideki yerini korur.Küçük oluduğu
+takdirde o indexin yerini alır ve sıralama kayar. [2,16,18,22,27,6]
+5-6.indexteki sayı sırayla 1.,2.,3.,4. ve 5.indexteki sayı kıyaslanır. 6.indexteki değer bu 5 indexteki değerden küçük olmadağı sürece dizideki yerini korur.Küçük oluduğu
+takdirde o indexin yerini alır ve sıralama kayar. [2,6,16,18,22,27]
 
 Big-O gösterimi = 0(n²)
 
 18 sayısı 3.indexte olduğu için avarage case kapsamına girer.
+
+
+
+[7,3,5,8,2,9,4,15,6] dizisinin Selection Sort'a göre ilk 4 adımını yazınız.
+
+[7,3,5,8,2,9,4,15,6]-> Selection Sort Aşamaları
+
+
+1-Dizide bulunan tüm sayılar sorgulanır. (n=9) 9 işlem gerçekleşir. Sorgu sonucu çıkan en küçük sayı, ilk indexteki sayı ile yer değiştirir. [2,3,5,8,7,9,4,15,6]
+2-İlk indexteki sayımızı netleştirdiğimiz için 2.indexteki sayı, ilk indexteki sayı hariç, dizideki diğer sayılarla sorgulanır. (n-1) 8 işlem gerçekleşir.
+Sorguda çıkan en küçük sayı 2.indexteki sayı ile yer değiştirir.  [2,3,5,8,7,9,4,15,6]
+3-İlk 2 indexteki sayıyı netleştirdiğimiz için 2.aşamada yaptığımız gibi, 3.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-2) 7 işlem gerçekleşir.
+[2,3,4,8,7,9,5,15,6]
+4-İlk 3 indexteki sayıyı netleştirdiğimiz için 2.aşamada yaptığımız gibi, 4.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-3) 6 işlem gerçekleşir.
+[2,3,4,5,7,9,8,15,6]
+5-İlk 4 indexteki sayıyı netleştirdiğimiz için 2.aşamada yaptığımız gibi, 5.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-4) 5 işlem gerçekleşir.
+[2,3,4,5,6,9,8,15,7]
+6-İlk 5 indexteki sayıyı netleştirdiğimiz için 2.aşamada yaptığımız gibi, 6.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-5) 4 işlem gerçekleşir.
+[2,3,4,5,6,7,8,15,9]
+7-İlk 6 indexteki sayıyı netleştirdiğimiz için 2.aşamada yaptığımız gibi, 7.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-6) 3 işlem gerçekleşir.
+[2,3,4,5,6,7,8,15,9]
+8-İlk 7 indexteki sayıyı netleştirdiğimiz için 2.aşamada yaptığımız gibi, 8.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-7) 2 işlem gerçekleşir.
+[2,3,4,5,6,7,8,9,15]
+9-İlk 8 indexteki sayıyı netleştirdiğimiz için 2.aşamada yaptığımız gibi, 9.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-8) 1 işlem gerçekleşir.
+[2,3,4,5,6,7,8,9,15]
