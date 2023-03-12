@@ -1,10 +1,14 @@
 [7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız.
 
 1-Root 5. Rastgele olarak soluna kendinden küçükler sağına kendinden büyükler yazılmıştır.
+2-1'in sağına büyükler,soluna küçükler yazılmıştır.
+3-7'nin sağına büyükler,soluna küçükler yazılmıştır.
+4-3'ün sağına büyükler, spluna küçükler yazılmıştır.
+5-8'in sağına büyükler yazılmıştır.
 
          5
       
    1            7
   0  3        6   8
-       4            9
-     2
+    2  4            9
+     
