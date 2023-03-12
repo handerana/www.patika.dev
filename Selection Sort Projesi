@@ -1,0 +1,30 @@
+Proje 1
+[22,27,16,2,18,6] -> Insertion Sort
+
+Yukarı verilen dizinin sort türüne göre aşamalarını yazınız.
+
+Big-O gösterimini yazınız.
+
+Time Complexity: Dizi sıralandıktan sonra 18 sayısı aşağıdaki case'lerden hangisinin kapsamına girer? Yazınız
+
+Average case: Aradığımız sayının ortada olması
+Worst case: Aradığımız sayının sonda olması
+Best case: Aradığımız sayının dizinin en başında olması.
+
+[22,27,16,2,18,6] -> Insertion Sort Aşamaları
+1-Dizideki en küçük sayı bulunur.(2) Dizide 6 adet sayı olduğu için (n=6) 6 işlem gerçekleşir.
+2-Dizide bulunan en küçük sayı ilk indexteki sayı ile yer değiştirir. [2,27,26,22,18,6]
+3-İlk indexteki sayımızı netleştirdiğimiz için 2.indexteki say, ilk indexteki sayı hariç, dizideki diğer sayılarla sorgulanır. (n-1) 5 işlem gerçekleşir.
+Sorguda çıkan en küçük sayı 2.indexteki sayı ile yer değiştirir. [2,6,26,22,18,27]
+4-İlk 2 indexteki sayıyı netleştirdiğimiz için 3.aşamada yaptığımız gibi, 3.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-2) 4 işlem gerçekleşir.
+[2,6,18,22,26,27]
+5-İlk 3 indexteki sayıyı netleştirdiğimiz için 3.aşamada yaptığımız gibi, 4.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-3) 3 işlem gerçekleşir.
+[2,6,18,22,26,27]
+5-İlk 4 indexteki sayıyı netleştirdiğimiz için 3.aşamada yaptığımız gibi, 5.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-4) 2 işlem gerçekleşir.
+[2,6,18,22,26,27]
+6-İlk 5 indexteki sayıyı netleştirdiğimiz için 3.aşamada yaptığımız gibi, 6.indexteki sayı, netleşen indexler hariç, dizideki diğer sayılarla sorgulanır. (n-5) 1 işlem gerçekleşir.
+[2,6,18,22,26,27]
+
+Big-O gösterimi = 0(n²)
+
+18 sayısı 3.indexte olduğu için avarage case kapsamına girer.
