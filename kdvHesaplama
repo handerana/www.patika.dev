@@ -1,0 +1,22 @@
+package Giris;
+import java.util.Scanner;
+
+public class Ders7_KdvDegeriHesaplama {
+    public static void main(String[] args) {
+        //sayi1 kullanicidan alınan tutar,sayi2 kdv,sayi3 kdvli tutar
+        double sayi1,sayi2,sayi3;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Kdv değerini hesaplamak istediğiniz tutarı giriniz :");
+        sayi1 = inp.nextDouble();
+        double oran = sayi1>1000? 0.08:0.18;
+        sayi2 = sayi1*oran;
+        sayi3 =sayi1+sayi2;
+        System.out.println("Kdvsiz tutar: "+sayi1);
+        System.out.println("Kdv oranı: "+oran);
+        System.out.println("Kdv tutarı : "+ sayi2);
+        System.out.println("Kdvli tutar : " +sayi3);
+
+
+
+    }
+}
