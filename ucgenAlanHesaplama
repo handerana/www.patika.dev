@@ -1,0 +1,19 @@
+package Giris;
+import java.util.Scanner;
+public class Ders9_UcgenAlanHesaplama {
+    public static void main(String[] args) {
+        int kenar1,kenar2,kenar3;
+        double alan,cevre;
+        Scanner inp = new Scanner(System.in);
+        //Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+        System.out.print("Ucgenin 1.kenarını giriniz: ");
+        kenar1 = inp.nextInt();
+        System.out.print("Ucgenin 2.kenarını giriniz: ");
+        kenar2 = inp.nextInt();
+        System.out.print("Ucgenin 3.kenarını giriniz: ");
+        kenar3 = inp.nextInt();
+        cevre = kenar1+kenar2+kenar3;
+        alan = Math.sqrt(cevre*(cevre-kenar1)*(cevre-kenar2)*(cevre-kenar3));
+        System.out.println("Alan : "+ alan);
+    }
+}
