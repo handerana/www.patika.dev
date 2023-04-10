@@ -1,0 +1,18 @@
+package Giris;
+import java.util.Scanner;
+
+public class Ders6_NotOrtalamasiHesaplama {
+    public static void main(String[] args) {
+        int not1,not2,ortalama ;
+        System.out.print("Fizik dersinize ait ilk notunuzu giriniz =");
+        Scanner inp = new Scanner(System.in);
+        not1 = inp.nextInt();
+        System.out.print("Fizik dersinize ait ikinci notunuzu giriniz =");
+        not2=inp.nextInt();
+        ortalama=(not1+not2)/2;
+
+        String sonuc = ortalama>60? "Gectiniz":"Kaldiniz";
+        System.out.println("Ortalamanız =" + ortalama);
+        System.out.println(sonuc);
+    }
+}
