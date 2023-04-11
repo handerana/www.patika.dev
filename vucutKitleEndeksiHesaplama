@@ -1,0 +1,22 @@
+package Giris;
+import java.util.Scanner;
+
+public class Ders12_VucutKitleEndeksiHesaplama {
+    public static void main(String[] args) {
+        //Java ile kullanıcıdan boy ve kilo değerlerini alıp bir değişkene atayın. Aşağıdaki formüle göre kullanıcının "Vücut Kitle İndeks" değerini hesaplayıp ekrana yazdırın.
+        //
+        //Formül
+        //Kilo (kg) / Boy(m) * Boy(m)
+        int kilo,boy;
+        System.out.print("Lütfen kilonuzu kg cinsinden giriniz :");
+        Scanner inp = new Scanner(System.in);
+        kilo = inp.nextInt();
+        System.out.print("Lütfen boyunuzu m cinsinden giriniz :");
+        boy = inp.nextInt();
+        double vucutKitleEndeksi ;
+        vucutKitleEndeksi = kilo/boy*boy;
+        System.out.println("Vücut kitle endeksiniz : " +vucutKitleEndeksi);
+
+
+    }
+}
